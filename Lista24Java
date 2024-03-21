@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a quantidade de notas: ");
+        int quantidadeNotas = scanner.nextInt();
+
+        double soma = 0;
+        for (int i = 1; i <= quantidadeNotas; i++) {
+            System.out.print("Digite a nota " + i + ": ");
+            double nota = scanner.nextDouble();
+            soma += nota;
+        }
+
+        double media = soma / quantidadeNotas;
+
+        System.out.println("\nA média aritmética das " + quantidadeNotas + " notas é: " + media);
+
+        scanner.close();
+    }
+}
